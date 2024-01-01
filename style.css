@@ -1,0 +1,157 @@
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+html,body{
+  font-family: 'Poppins', sans-serif;
+/* font-family: 'Work Sans', sans-serif; */
+color: var(--primary-color);
+}
+:root{
+  --primary-color:#183b56;
+  --secondary-color:#577592;
+  --acent-color:#2294ed;
+  --acent-color-dark:#1d69a3;
+ 
+}
+p{
+  font-family: 'Roboto', sans-serif; 
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  gap: 20px;
+  cursor: pointer;
+}
+ .nav-item.active{
+  color: #a31d2a;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.container{
+  max-width: 1100px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+nav{
+  background: #f3faff;
+  box-shadow: 0 0 4px #bbdbe2;
+  position: fixed;
+  z-index: 88;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.main-nav{
+  justify-content: space-between;
+  padding-block: 8px;
+}
+a:hover{
+  color: var(--secondary-color);
+}
+#search-box{
+  height: 30px;
+  gap: 8px;
+}
+#search-box .input-box{
+  width: 200px;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid #bbdbe2;
+  border-radius: 4px;
+}
+.button{
+  background-color: var(--acent-color);
+  color: #fff;
+  padding: 5px 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.button:hover{
+  background-color: var(--acent-color-dark);
+}
+#main{
+  padding-block: 20px;
+  margin-top: 70px;
+}
+.cards-container{
+  justify-content: space-between;
+  flex-wrap: wrap;  
+  row-gap: 20px;
+  align-items: start;
+}
+.card{
+  width: 300px;
+  min-height: 400px;
+  box-shadow: 0 0 4px #d4ecff;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  overflow: hidden;
+}
+.card img{
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+.card-content{
+  padding: 12px;
+}
+#news-source{
+  margin-block: 1rem;
+}
+@media (max-width:1000px) {
+
+  .cards-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }   
+   #main{
+    padding-left: 2rem;
+   }
+
+}
+@media (max-width:800px) {
+  .container{
+    max-width: 800px;
+    padding: 0 5rem;
+    gap: 1.2rem;
+  }   
+  
+}
+@media (max-width:730px) {
+  .cards-container{
+    grid-template-columns: 1fr;
+   
+  }
+ #main{
+  padding-left: 6rem;
+ }
+ #nav-links{
+  display: none;
+ }
+}
+@media (max-width:590px) {
+ #main{
+  padding-left: 2rem;
+ }
+ .flex a{
+  padding-right: 1rem;
+ }
+}
+@media (max-width:490px) {
+  .flex{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+}
+@media (max-width:450px) {
+  #main{
+    padding-left: .1rem;
+  }
+}
